@@ -27,9 +27,11 @@ def lenguajes():
 def contacto():
     return render_template('contacto.html')
 
-#fdfdfdffdDSDSD
-
 if __name__=='__main__':
     app.run(debug=True)
+    
+    
+    
+    
     
     
