@@ -1,16 +1,29 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Lenguajes</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-       <h1> Hola </h1>
-        <script src="" async defer></script>
-    </body>
-</html>
+{% block title%} VideoJuegos {% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h1>Juegos más descargados</h1>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for leng in lenguajes %}
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{leng}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
